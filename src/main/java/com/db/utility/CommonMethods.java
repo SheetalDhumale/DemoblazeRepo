@@ -2,10 +2,14 @@ package com.db.utility;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.db.testBase.TestBase;
 
@@ -25,5 +29,10 @@ public class CommonMethods extends TestBase
 			e.printStackTrace();
 		}
 		return path;
+	}
+	public static void explicitWaitHandle(WebElement elem)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		wait.until(ExpectedConditions.visibilityOf(elem));
 	}
 }

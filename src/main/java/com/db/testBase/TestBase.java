@@ -9,15 +9,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.db.pageLayer.HomePage;
 import com.db.utility.ConfigReader;
 
 public class TestBase
 {
 	public static WebDriver driver;
+	public static ConfigReader cr;
+	public HomePage home;
 	@BeforeMethod
 	public void initBrowser() throws IOException
 	{
-		ConfigReader cr = new ConfigReader();
+		cr = new ConfigReader();
 		String br = cr.getValue("browser");
 		if(br.equalsIgnoreCase("Chrome"))
 		{
@@ -35,6 +38,8 @@ public class TestBase
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		
+		home = new HomePage();
 		
 	}
 	@AfterMethod

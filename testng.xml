@@ -7,7 +7,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.db.testBase.TestBase"/>
-      <class name="com.db.testLayer.BasicTest"></class>
+      <class name="com.db.testLayer.HomePageTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

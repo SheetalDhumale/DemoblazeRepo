@@ -14,7 +14,7 @@ import com.db.testBase.TestBase;
 public class ListenerSetup extends TestBase implements ITestListener
 {
 	ExtentReports extent = ExtentReportGen.ExtentReportGenerator();
-	static ExtentTest test;
+	public static ExtentTest test;
 	public void onTestStart(ITestResult result)
 	{
 		System.out.println("Test Execution started : "+result.getName());
