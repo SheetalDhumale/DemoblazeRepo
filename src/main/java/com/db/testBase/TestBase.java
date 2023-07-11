@@ -10,6 +10,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.db.pageLayer.HomePage;
+import com.db.pageLayer.ProductListPage;
+import com.db.pageLayer.ProductPage;
 import com.db.utility.ConfigReader;
 
 public class TestBase
@@ -17,6 +19,8 @@ public class TestBase
 	public static WebDriver driver;
 	public static ConfigReader cr;
 	public HomePage home;
+	public ProductListPage prod_list;
+	public ProductPage product;
 	@BeforeMethod
 	public void initBrowser() throws IOException
 	{
@@ -40,11 +44,13 @@ public class TestBase
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		home = new HomePage();
+		prod_list = new ProductListPage();
+		product = new ProductPage();
 		
 	}
 	@AfterMethod
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 }

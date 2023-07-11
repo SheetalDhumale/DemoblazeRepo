@@ -8,6 +8,7 @@
     <classes>
       <class name="com.db.testBase.TestBase"/>
       <class name="com.db.testLayer.HomePageTest"></class>
+      <class name="com.db.testLayer.BuyFunctionalityTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

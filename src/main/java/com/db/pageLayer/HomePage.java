@@ -33,7 +33,13 @@ public class HomePage extends TestBase
 		CommonMethods.explicitWaitHandle(logged_user_name);
 		String name = logged_user_name.getText();
 		return name;
-		
+	}
+	@FindBy(xpath="//a[text()='Phones']")
+	private WebElement phones_link;
+	
+	public void clickOnPhones()
+	{
+		phones_link.click();
 	}
 	
 }
