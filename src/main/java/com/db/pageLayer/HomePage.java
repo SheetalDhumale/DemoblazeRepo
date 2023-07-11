@@ -41,5 +41,11 @@ public class HomePage extends TestBase
 	{
 		phones_link.click();
 	}
+	@FindBy(xpath="//a[text()='Monitors']")
+	private WebElement monitors_link;
+	public void clickOnMonitors()
+	{
+		monitors_link.click();
+	}
 	
 }

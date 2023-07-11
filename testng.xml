@@ -9,6 +9,7 @@
       <class name="com.db.testBase.TestBase"/>
       <class name="com.db.testLayer.HomePageTest"></class>
       <class name="com.db.testLayer.BuyFunctionalityTest"></class>
+      <class name="com.db.testLayer.BasicFunctionalityTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
